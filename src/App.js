@@ -1,7 +1,7 @@
 import React from 'react';
 import { jsonServerRestClient, Admin, Resource, Delete } from 'admin-on-rest';
 
-import { PostList, PostEdit, PostCreate } from './posts';
+import { PostList, PostEdit, PostCreate} from './posts';
 import { UserList } from './users';
 
 const App = () => (
