@@ -1,13 +1,11 @@
 import React from 'react';
-import { jsonServerRestClient, Admin, Resource, Delete } from 'admin-on-rest';
+import { jsonServerRestClient, simpleRestClient, Admin, Resource, Delete } from 'admin-on-rest';
 
-import { PostList, PostEdit, PostCreate} from './posts';
-import { UserList } from './users';
+import { UserList, UserEdit, UserCreate} from './users';
 
 const App = () => (
-    <Admin restClient={jsonServerRestClient('http://jsonplaceholder.typicode.com')}>
-        <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} remove={Delete}/>
-        <Resource name="users" list={UserList} />
+    <Admin restClient={simpleRestClient('http://localhost:3001')}>
+        <Resource name="users" list={UserList} edit={UserEdit} create={UserCreate} remove={Delete}/>
     </Admin>
 );
 
